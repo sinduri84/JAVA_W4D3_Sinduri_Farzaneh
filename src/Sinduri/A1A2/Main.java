@@ -1,4 +1,4 @@
-package Sinduri.A1;
+package Sinduri.A1A2;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -17,7 +17,7 @@ public class Main {
                 System.out.println("File already exists");
             }
         } catch (Exception e) {
-            System.out.println("An error occured");
+            System.out.println("An error occurred");
             e.printStackTrace();
         }
 

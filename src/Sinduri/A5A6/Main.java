@@ -1,16 +1,16 @@
-package Sinduri.A5;
+package Sinduri.A5A6;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-import static Sinduri.A5.Product.printReport;
+import static Sinduri.A5A6.Product.printReport;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Product product1 = new Product("Orange Juice", 2.56, 20, "Juice that comes from Oranges");
         Product product2 = new Product("Chicken Drumsticks", 8.24, 5, "A part of chicken");
         Product product3 = new Product("Beer", 2.89, 50, "Juice that makes you happy");
@@ -49,7 +49,7 @@ public class Main {
         }
         System.out.println(readString);
 
-        //Using BufferedReader to read File tline by line - In Java 6
+        //Using BufferedReader to read File line by line - In Java 6
         StringBuilder contentBuilder = new StringBuilder();
         try (BufferedReader br = new BufferedReader(new FileReader("./src/Sinduri/myFiles/productList.txt"))) {
             String sCurrentLine;
@@ -61,8 +61,33 @@ public class Main {
         }
         System.out.println(contentBuilder.toString());
 
+        //Using List
+        System.out.println("Printing List using Scanner");
+        List<String> fileLines = readFileInList("./src/Sinduri/myFiles/productList.txt");
+        for(String string: fileLines) {
+            System.out.println(string);
+        }
 
-        //Using readFileAsString
 
+
+    }
+
+    //Returning List using Scanner;
+    public static List<String> readFileInList(String filePath) {
+        List<String> fileLines = new ArrayList<>();
+        try {
+            File file1 = new File(filePath);
+            Scanner file = new Scanner(file1);
+
+            String currentLine;
+            while ((file.hasNextLine())) {
+                fileLines.add(file.nextLine());
+            }
+            file.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return fileLines;
     }
 }

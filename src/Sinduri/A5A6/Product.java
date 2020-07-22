@@ -1,4 +1,4 @@
-package Sinduri.A5;
+package Sinduri.A5A6;
 
 import java.io.FileWriter;
 import java.io.IOException;
