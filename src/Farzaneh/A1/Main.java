@@ -1,4 +1,4 @@
-package Farzaneh.A1;
+package Farzaneh.A1_A2;
 
 import java.io.File;
 import java.io.FileWriter;
