@@ -1,0 +1,11 @@
+
+ID       Name                             Price   Quantity   Description                      
+1        Orange Juice                     2.56    20         Juice that comes from Oranges    
+2        Chicken Drumsticks               8.24    5          A part of chicken                
+3        Beer                             2.89    50         Juice that makes you happy       
+4        Sugar                            3.95    30         We all need some sugar in life   
+5        Green Tea                        9.85    25         Expensive Tea to wake you up     
+6        Chamomile Tea                    17.56   40         Expensive Tea to make you relax  
+7        Sparkling Water                  4.23    10         When you need more than good old Tap water 
+8        Eggs                             5.56    50         Easy to cook and easy to eat     
+9        Cotton Face Mask                 4.8     90         Wear a mask and protect the people around you 
